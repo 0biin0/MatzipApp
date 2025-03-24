@@ -8,7 +8,6 @@ function App(): React.ReactNode {
     <View style={styles.container}>
     <Text>텍스트</Text>
     <Button title="버튼이름"  onPress={() => console.log('클림됨!')}/>
-      <Text>하이</Text>
       <TextInput />
     </View>
   </SafeAreaView>;
