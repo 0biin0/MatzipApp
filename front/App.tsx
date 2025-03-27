@@ -4,22 +4,33 @@ import {StyleSheet, View, Button, SafeAreaView} from 'react-native';
 
 
 function App(): React.ReactNode {
-  return <SafeAreaView>
-    <View style={styles.container}>
+  return <SafeAreaView style={styles.container}>
+    <View style={styles.inputContainer}> 
+    <TextInput  style={styles.input}/>
     <Text>텍스트</Text>
-    <Button title="버튼이름"  onPress={() => console.log('클림됨!')}/>
-      <TextInput />
     </View>
   </SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor : 'red',
-    // margin: '10%',
-    marginHorizontal: 10,
-    marginVertical: 10,
+    flex: 1,
+    backgroundColor : 'yellow',
   },
+  input: {
+    flex: 1,
+    borderWidth:2,
+    borderColor: 'black',
+    height:100,
+    width:100,
+  },
+  inputContainer: {
+    flex: 1,
+    backgroundColor:'red',
+    flexDirection: 'row',
+    alignItems: 'center',
+    // justifyContent: 'center'
+  }
 });
 
 export default App;
